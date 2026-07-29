@@ -3,9 +3,9 @@ import pandas as pd
 import joblib
 
 # Set page layout for Mobile Friendly view
-st.set_page_config(page_title="Bitcoin Price Predictor", page_icon="🪙", layout="centered")
+st.set_page_config(page_title="Bitcoin Price Predictor", page_icon="", layout="centered")
 
-st.title("🪙 Bitcoin Close Price Predictor")
+st.title(" Bitcoin Close Price Predictor")
 st.write("Ingiza data za soko la leo ili kutabiri bei ya kufunga (Close Price):")
 
 # 1. Pakia Model
@@ -18,7 +18,7 @@ with st.form("prediction_form"):
     low_price = st.number_input("Low Price ($ USD)", value=62714.80, step=100.0)
     volume = st.number_input("Volume ($ USD)", value=24600000000.0, step=1000000.0)
     
-    submit_btn = st.form_submit_button("📈 Tabiri Bei (Predict)")
+    submit_btn = st.form_submit_button(" Tabiri Bei (Predict)")
 
 # 3. Onyesha Matokeo
 if submit_btn:
@@ -31,4 +31,4 @@ if submit_btn:
     
     prediction = model.predict(input_data)[0]
     
-    st.success(f"### 💵 Estimated Close Price: ${float(prediction.flat[0]):,.2f} USD")
+    st.success(f"###  Estimated Close Price: ${float(prediction.flat[0]):,.2f} USD")
