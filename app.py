@@ -31,4 +31,4 @@ if submit_btn:
     
     prediction = model.predict(input_data)[0]
     
-    st.success(f"### 💵 Estimated Close Price: ${prediction:,.2f} USD")
+    st.success(f"### 💵 Estimated Close Price: ${float(prediction.flat[0]):,.2f} USD")
