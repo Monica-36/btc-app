@@ -82,7 +82,7 @@ try:
         pct_change = (price_change / yesterday_data['Close']) * 100
         
         # Display Live Overview Cards
-        st.subheader("📊 Live Bitcoin Market Overview (Auto-Fetched)")
+        st.subheader(" Live Bitcoin Market Overview (Auto-Fetched)")
         m1, m2, m3, m4, m5 = st.columns(5)
         
         m1.metric("Current / Today Close", f"${today_data['Close']:,.2f}", f"{price_change:+,.2f} ({pct_change:+.2f}%)")
