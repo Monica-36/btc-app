@@ -99,7 +99,7 @@ try:
             volume      = st.number_input("24h Volume", value=float(today_data['Volume']), step=1000000.0)
 
             st.markdown("<br>", unsafe_allow_html=True)
-            predict_btn = st.button(f"🔮 Generate Forecast ({forecast_horizon})", type="primary", use_container_width=True)
+            predict_btn = st.button(f" Generate Forecast ({forecast_horizon})", type="primary", use_container_width=True)
 
         with col_chart:
             st.subheader(" Historical 30-Day Trend")
