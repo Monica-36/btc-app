@@ -3,9 +3,9 @@ import numpy as np
 import joblib
 import os
 
-st.set_page_config(page_title="Bitcoin Price Prediction", page_icon="🚀", layout="centered")
+st.set_page_config(page_title="Bitcoin Price Prediction", page_icon="", layout="centered")
 
-st.title("🚀 Bitcoin Price Prediction App")
+st.title(" Bitcoin Price Prediction App")
 st.write("Enter **today's** market data for Bitcoin to predict **tomorrow's** closing price:")
 
 # Load the trained model safely
@@ -24,7 +24,7 @@ try:
     model = load_btc_model()
     
     # User inputs simple market data
-    st.subheader("📊 Enter Today's Market Data")
+    st.subheader("Enter Today's Market Data")
     
     col1, col2 = st.columns(2)
     with col1:
@@ -43,14 +43,14 @@ try:
     calculated_rsi    = 50.0  # Default neutral momentum
 
     # Prediction Button
-    if st.button("🔮 Predict Tomorrow's Price", type="primary"):
+    if st.button(" Predict Tomorrow's Price", type="primary"):
         features = np.array([[open_price, high_price, low_price, close_price, volume, 
                               calculated_return, calculated_ma7, calculated_ma21, calculated_rsi]])
         
         prediction = model.predict(features)
         
         st.divider()
-        st.success(f"📈 **Predicted Closing Price for Tomorrow:** ${prediction[0]:,.2f}")
+        st.success(f" **Predicted Closing Price for Tomorrow:** ${prediction[0]:,.2f}")
 
 except Exception as e:
     st.error(f"Error loading model: {e}")
